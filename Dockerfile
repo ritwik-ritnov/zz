@@ -6,8 +6,6 @@ WORKDIR /app
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Kolkata
-RUN rm -r /var/lib/apt/lists/*
-RUN apt upgrade
 RUN apt -qq update --fix-missing && \
     apt -qq install -y \
     git \
