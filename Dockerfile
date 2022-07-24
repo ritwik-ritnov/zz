@@ -1,11 +1,7 @@
 FROM anasty17/mltb:heroku
-COPY . .
-RUN apt-get clean \
- && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN mkdir ./app
-RUN chmod 777 ./app
-WORKDIR /app
+WORKDIR /usr/src/app
+RUN chmod 777 /usr/src/app
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Kolkata
